@@ -1,4 +1,4 @@
-// * P1.c * //
+// * P2.c * //
 // * Francielle Roberta Ferreira * //
 // * 11811EEL042 * //
 
@@ -306,8 +306,8 @@ int main()
 	
 	do
 	{
-		printf("\nPrograma de conversao entre bases numericas.\nO que voce deseja converter:\n" "\n1. Binario para Decimal" "\n2. Binario para Hexadecimal" "\n3. Hexadecimal para Decimal" "\n4. Hexadecimal para Binario"
-		"\n5. Decimal para Binario" "\n6. Decimal para Hexadecimal"  "\n7. Octal para Decimal" "\n8. Decimal para Octal" "\n9. Sair do programa" "\n\nOpcao ");
+		printf("\n1. Inserir uma palavra" "\n2. Inserir uma chave" "\n3. Criptografar a palavra inserida" "\n4. Descriptografar a palavra inserida"
+		"\n5. Limpar tudo" "\n6. Sair do programa ");
 		scanf ("%d",&cont);
 		
 		switch (cont)
