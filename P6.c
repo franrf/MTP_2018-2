@@ -8,39 +8,31 @@
 #define pi 3.14159265359
 #define r 1
 
-typedef struct 
+typedef struct
 {
-	float x;
-	float y;
-}Ponto;
+    float x;
+    float y;
+} Ponto;
 
-Ponto *gera_pontos(int N)
+int main()
 {
-	int i;
-	Ponto *p = (Ponto *)calloc(N,sizeof(Ponto));
-        
-	printf("\n");
-	
-	for (i = 0; i < N; i++)
-	{
-		p[i].x = cos(i*2.0*M_PI/(N-1));
-		p[i].y = sin(i*2.0*M_PI/(N-1));
-		printf("(%.3f, %.3f) ",p[i].x,p[i].y);
-	}
-	return p;
-}
+    int N, i;
+    Ponto *xy;
 
-int main() 
-{
-	unsigned int N;
-	Ponto *p;
+    scanf("%i", &N);
+    getchar();
     
-	printf("",N);
-	scanf("%d",&N); 
-	getchar();
+    xy= (Ponto *) malloc(N*sizeof(Ponto));
+    printf("%i retorna \" ",N);
     
-	p = gera_pontos(N);
-	free(p);
+    for(i=0; i<N; i++)
+    {
+        xy->x= r*cos(i*2*pi/(N));
+        xy->y= r*sin(i*2*pi/N);
+        printf("(%.3f, %.3f) ", xy->x, xy->y);
+    }
     
-	return 0;
+    printf("\" ");
+    free(xy);
+    return 0;
 }
