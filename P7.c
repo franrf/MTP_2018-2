@@ -84,12 +84,12 @@ struct ponto *read (unsigned int *pn)
     return p;
 }
 
-void show (struct ponto *p, struct ponto *pf)
+void mostrar (struct ponto *p, struct ponto *pf)
 {
     if(p < pf)
     {
         printf("(%.3lf , %.3lf) \n", (*p).x, (*p).y);
-        show (p+1, pf);
+        mostrar (p+1, pf);
     }
 }
 
@@ -101,8 +101,8 @@ int main ()
     do
     {
         system ("cls");
-        printf("            MENU \n\n1) Gerar arquivo com pontos. \n2) Recuperar pontos de arquivo. \
-			\n3) Sair do programa.\n\n");
+        printf("            MENU \n\n1. Gerar arquivo com pontos. \n2. Recuperar pontos de arquivo. \
+			\n3. Sair do programa.\n\n");
         scanf("%d", &op);
         switch (op)
         {
@@ -120,7 +120,7 @@ int main ()
             break;
         case 2:
             p = read(&n);
-            show(p, p+n);
+            mostrar(p, p+n);
             getch ();
             break;
         default:
@@ -132,7 +132,6 @@ int main ()
     }
     while(op != 3);
 
-    printf ("Tchau!");
     free(p);
     return 0;
 }
